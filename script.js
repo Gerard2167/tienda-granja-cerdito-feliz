@@ -11,6 +11,12 @@ const combos = [
   { nombre: "Combo Familiar", lbs: 10, img: "img/Combo Familiar.jpg", stock: true }
 ];
 
+const regionGuardada = localStorage.getItem('region');
+document.getElementById("ubicacion").innerText =
+  regionGuardada === "interior"
+    ? "📍 Interior"
+    : "📍 Ciudad";
+
 let carrito = [];
 
 const contenedor = document.getElementById("productos");
