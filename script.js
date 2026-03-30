@@ -33,8 +33,9 @@ const combos = [
   }
 ];
 
+const regionGuardada = localStorage.getItem('region');
+
 document.addEventListener("DOMContentLoaded", function () {
-  const regionGuardada = localStorage.getItem('region');
   const ubicacion = document.getElementById("ubicacion");
 
   if (ubicacion && regionGuardada) {
