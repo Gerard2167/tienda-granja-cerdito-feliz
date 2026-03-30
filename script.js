@@ -1,5 +1,5 @@
 const productos = [
-  { nombre: "Chuleta de Lomo", img: "img/chuleta.jpg", precioInterior: 2.75, precioCiudad: 3.25, tipo: "lb", stock: true },
+  { nombre: "Chuleta de Lomo", img: "img/chuleta.jpg", precioInterior: 2.75, precioCiudad: 3.25, tipo: "lb", stock: false },
 
   { nombre: "Costillas", img: "img/Costilla.jpg", precioInterior: 3.25, precioCiudad: 3.75, tipo: "lb", stock: true },
 
