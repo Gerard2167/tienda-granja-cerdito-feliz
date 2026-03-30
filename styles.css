@@ -62,6 +62,7 @@ button {
   width: 50%;
   border-radius: 8px;
   cursor: pointer;
+  box-shadow: 3px 3px 2px rgba(0,0,0,0.3);
 }
 
 .btn-add { background: #4CAF50; color: white; }
@@ -76,6 +77,7 @@ button {
   padding: 20px;
   border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
 }
 
 input {
@@ -91,7 +93,7 @@ input {
 }
 
 
-.producto-img-p {
+.producto-img-p, .producto-img-c {
   width: 100%;
   height: 200px;
   object-fit: cover;
@@ -100,20 +102,72 @@ input {
 }
 
 
-.img-container {
-  width: 100%;
-  height: 200px;
-  background: #f4f4f4;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 10px;
-  overflow: hidden;
-  margin-bottom: 10px;
+.welcome {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  background: linear-gradient(135deg,#e8f5e9,#ffffff);
 }
 
-.producto-img-c {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
+.welcome-container {
+  text-align:center;
+  background:white;
+  padding:30px;
+  border-radius:15px;
+  box-shadow:0 4px 15px rgba(0,0,0,0.1);
+  max-width:400px;
+}
+
+.mensaje {
+  font-size:14px;
+  color:#555;
+  margin:15px 0;
+}
+
+.back-container {
+  text-align: left;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.btn-back {
+  background: #555;
+  color: white;
+  padding: 8px 15px;
+  width: 15%;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  font-size: 14px;
+  box-shadow: 3px 3px 2px rgba(0,0,0,0.3);
+}
+
+.btn-back:hover {
+  background: #333;
+}
+
+/* CONTENEDOR IMAGEN */
+.img-container {
+  position: relative;
+}
+
+/* BADGE AGOTADO */
+.badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: red;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* TEXTO AGOTADO */
+.agotado-texto {
+  color: red;
+  font-weight: bold;
+  margin-top: 10px;
 }

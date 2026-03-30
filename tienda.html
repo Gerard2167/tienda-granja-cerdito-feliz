@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda | Granja Cerdito Feliz</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <img src="/Logo Granja Cerdito Feliz fondo blanco.png" class="logo">
+  <h1>Productos 🐷</h1>
+</header>
+
+<div class="back-container">
+  <button onclick="volverInicio()" class="btn-back">⬅ Volver al inicio</button>
+</div>
+
+<p id="ubicacion" style="text-align:center; font-weight:bold;"></p>
+
+<section class="alert">
+  ⚠️ Venta por pedidos – Se agota rápido
+</section>
+
+<div class="grid" id="productos"></div>
+
+<h2 class="section-title">🔥 Combos Especiales</h2>
+<div class="grid" id="combos"></div>
+
+<div class="cart">
+  <h2>🛒 Tu Pedido</h2>
+  <div id="lista"></div>
+  <h3>Total: $<span id="total">0</span></h3>
+
+  <input id="nombre" placeholder="Nombre">
+  <input id="correo" placeholder="Correo">
+
+  <button class="btn-primary" onclick="enviarPedido()">Enviar Pedido por WhatsApp</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -3,45 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Granja Cerdito Feliz</title>
+  <title>Bienvenido | Granja Cerdito Feliz</title>
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="welcome">
 
-<header>
-  <img src="/Logo Granja Cerdito Feliz fondo blanco.png" alt="Logo" class="logo">
+<div class="welcome-container">
+  <img src="/Logo Granja Cerdito Feliz fondo blanco.png" class="logo">
   <h1>Granja Cerdito Feliz 🐷</h1>
-  <p class="tagline">Carne fresca • Directo de granja • Cupos limitados</p>
-</header>
+  <p class="mensaje">
+    Somos una granja comprometida con ofrecer carne fresca, de calidad y directa al consumidor.
+    Nuestro objetivo es brindarte confianza, frescura y el mejor producto para tu familia.
+  </p>
 
-<section class="controls">
-  <label>Selecciona tu ubicación:</label>
-  <select id="region">
-    <option value="2.5">Ciudad ($2.50/lb)</option>
-    <option value="2.25">Interior ($2.25/lb)</option>
-  </select>
-</section>
+  <h3>Selecciona tu ubicación</h3>
 
-<section class="alert">
-  ⚠️ Venta por pedidos – Se agota rápido
-</section>
-
-<div class="grid" id="productos"></div>
-
-<h2 class="section-title">🔥 Combos Especiales</h2>
-<div class="grid" id="combos"></div>
-
-<div class="cart">
-  <h2>🛒 Tu Pedido</h2>
-  <div id="lista"></div>
-  <h3>Total: $<span id="total">0</span></h3>
-
-  <input id="nombre" placeholder="Nombre">
-  <input id="correo" placeholder="Correo">
-
-  <button class="btn-primary" onclick="enviarPedido()">Enviar Pedido por WhatsApp</button>
+  <button onclick="seleccionarRegion('ciudad')" class="btn-primary">Ciudad</button>
+  <button onclick="seleccionarRegion('interior')" class="btn-primary">Interior</button>
 </div>
 
-<script src="script.js"></script>
+<script>
+function seleccionarRegion(region) {
+  localStorage.setItem('region', region);
+  window.location.href = 'tienda.html';
+}
+</script>
+
 </body>
 </html>
