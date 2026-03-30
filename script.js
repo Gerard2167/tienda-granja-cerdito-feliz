@@ -11,11 +11,17 @@ const combos = [
   { nombre: "Combo Familiar", lbs: 10, img: "img/Combo Familiar.jpg", stock: true }
 ];
 
-const regionGuardada = localStorage.getItem('region');
-document.getElementById("ubicacion").innerText =
-  regionGuardada === "interior"
-    ? "📍 Interior"
-    : "📍 Ciudad";
+document.addEventListener("DOMContentLoaded", function () {
+  const regionGuardada = localStorage.getItem('region');
+  const ubicacion = document.getElementById("ubicacion");
+
+  if (ubicacion && regionGuardada) {
+    ubicacion.innerHTML =
+      regionGuardada === "interior"
+        ? "📍 Entrega: Interior"
+        : "📍 Entrega: Ciudad";
+  }
+});
 
 let carrito = [];
 
